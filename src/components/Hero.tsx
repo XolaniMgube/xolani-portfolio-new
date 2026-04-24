@@ -5,7 +5,7 @@ export function Hero() {
     <section className="min-h-screen flex flex-col justify-center px-[5vw] pt-32 pb-24 max-w-content">
       <Reveal>
         {/* pre-line */}
-        <div className="flex items-center gap-3 font-mono text-[0.78rem] text-blue tracking-[0.06em] mb-5">
+        <div className="flex items-center gap-3 font-mono text-[0.85rem] text-blue tracking-[0.06em] mb-5">
           <span className="inline-block w-8 h-px bg-blue flex-shrink-0" />
           Frontend Developer · Johannesburg
         </div>
@@ -29,7 +29,7 @@ export function Hero() {
         </p>
 
         {/* desc */}
-        <p className="text-[0.95rem] text-body max-w-[520px] leading-[1.85] mb-12">
+        <p className="text-[1.05rem] text-bright max-w-130 leading-[1.85] mb-12">
           Four years of building fast, accessible interfaces for businesses that care
           about their users. I write clean code, ship on time, and think about the{" "}
           <strong className="text-bright font-medium">business problem</strong> before

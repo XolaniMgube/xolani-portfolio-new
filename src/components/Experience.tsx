@@ -21,7 +21,7 @@ export function Experience() {
               <div className="absolute left-[84px] top-[1.85rem] w-[13px] h-[13px] rounded-full border-2 border-blue bg-bg hidden sm:block" />
 
               {/* year */}
-              <div className="font-mono text-[0.65rem] text-dim tracking-[0.04em] leading-relaxed pt-[0.15rem] mb-2 sm:mb-0">
+              <div className="font-mono text-[0.72rem] text-muted tracking-[0.04em] leading-relaxed pt-[0.15rem] mb-2 sm:mb-0">
                 {e.years.replace(" — ", "\n—\n").split("\n").map((line, idx) => (
                   <span key={idx} className="block">{line}</span>
                 ))}
@@ -29,9 +29,9 @@ export function Experience() {
 
               {/* body */}
               <div>
-                <div className="text-[0.9rem] font-medium text-snow mb-[0.1rem]">{e.role}</div>
-                <div className="font-mono text-[0.7rem] text-blue tracking-[0.03em] mb-3">{e.company}</div>
-                <p className="text-[0.845rem] text-body leading-[1.8] mb-3">{e.desc}</p>
+                <div className="text-[1.05rem] font-medium text-snow mb-[0.1rem]">{e.role}</div>
+                <div className="font-mono text-[0.78rem] text-blue tracking-[0.03em] mb-3">{e.company}</div>
+                <p className="text-[1rem] text-bright leading-[1.8] mb-3">{e.desc}</p>
                 <div className="flex flex-wrap gap-[0.35rem]">
                   {e.chips.map((c) => <Chip key={c} label={c} />)}
                   {e.tealChips.map((c) => <Chip key={c} label={c} teal />)}

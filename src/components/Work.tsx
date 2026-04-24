@@ -18,19 +18,19 @@ export function Work() {
               className="group grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-8 items-start px-6 py-7 bg-bg-card rounded-[6px] border border-bg-line hover:border-dim hover:translate-x-1 transition-all duration-200 block"
             >
               <div>
-                <div className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-teal mb-1">
+                <div className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-teal mb-1">
                   {p.type}
                 </div>
-                <div className="font-serif text-[1.05rem] font-medium text-snow mb-3 group-hover:text-blue transition-colors">
+                <div className="font-serif text-[1.2rem] font-medium text-snow mb-3 group-hover:text-blue transition-colors">
                   {p.title}
-                  <span className="inline-block text-[0.7rem] text-dim group-hover:text-blue group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform ml-1">
+                  <span className="inline-block text-[0.8rem] text-muted group-hover:text-blue group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform ml-1">
                     ↗
                   </span>
                 </div>
-                <p className="text-[0.85rem] text-body leading-[1.8] mb-2 max-w-[520px]">
+                <p className="text-[1rem] text-bright leading-[1.8] mb-2 max-w-130">
                   {p.desc}
                 </p>
-                <p className="font-mono text-[0.72rem] text-muted italic mb-4">{p.stat}</p>
+                <p className="font-mono text-[0.78rem] text-body italic mb-4">{p.stat}</p>
                 <div className="flex flex-wrap gap-[0.35rem]">
                   {p.chips.map((c) => (
                     <Chip key={c} label={c} />

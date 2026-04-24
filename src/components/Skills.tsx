@@ -20,9 +20,9 @@ export function Skills() {
               <div className="flex items-center gap-[0.6rem] mb-4">
                 <span
                   className="w-[6px] h-[6px] rounded-full flex-shrink-0"
-                  style={{ background: g.teal ? "var(--teal)" : "var(--blue)" }}
+                  style={{ background: g.teal ? "var(--color-teal)" : "var(--color-blue)" }}
                 />
-                <span className="font-mono text-[0.68rem] tracking-[0.12em] uppercase text-muted">
+                <span className="font-mono text-[0.75rem] tracking-[0.12em] uppercase text-body">
                   {g.label}
                 </span>
               </div>

@@ -12,7 +12,7 @@ export function About() {
       <Reveal>
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-16 items-start">
           {/* copy */}
-          <div className="space-y-4 text-[0.9rem] text-body leading-[1.9]">
+          <div className="space-y-4 text-[1rem] text-bright leading-[1.9]">
             <p>
               I&apos;m Xolani. I got into frontend development because I liked making things — and
               web is one of the few places where you can build something from nothing and have
@@ -43,12 +43,12 @@ export function About() {
           <div className="flex flex-col divide-y divide-bg-line">
             {facts.map((f) => (
               <div key={f.label} className="flex flex-col gap-[0.15rem] py-[0.9rem] first:pt-0">
-                <span className="font-mono text-[0.62rem] tracking-[0.12em] uppercase text-dim">
+                <span className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-muted">
                   {f.label}
                 </span>
                 <span
-                  className="text-[0.875rem]"
-                  style={{ color: f.teal ? "var(--teal)" : "var(--bright)" }}
+                  className="text-[0.95rem]"
+                  style={{ color: f.teal ? "var(--color-teal)" : "var(--color-bright)" }}
                 >
                   {f.value}
                 </span>

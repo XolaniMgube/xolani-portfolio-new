@@ -1,30 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --bg:       #10141C;
-  --bg-card:  #161C28;
-  --bg-line:  #1E2637;
-  --dim:      #3D4F66;
-  --muted:    #6B7FA0;
-  --body:     #9BAEC8;
-  --bright:   #CDD9EB;
-  --white:    #EBF2FF;
-  --blue:     #4D9EFF;
-  --blue-bg:  #0E2040;
-  --teal:     #2DD4BF;
-  --teal-bg:  #0A2922;
-  --amber:    #F5A623;
+@theme {
+  --color-bg:       #10141C;
+  --color-bg-card:  #161C28;
+  --color-bg-line:  #1E2637;
+  --color-dim:      #3D4F66;
+  --color-muted:    #6B7FA0;
+  --color-body:     #9BAEC8;
+  --color-bright:   #CDD9EB;
+  --color-snow:     #EBF2FF;
+  --color-blue:     #4D9EFF;
+  --color-blue-bg:  #0E2040;
+  --color-teal:     #2DD4BF;
+  --color-teal-bg:  #0A2922;
+  --color-amber:    #F5A623;
+
+  --font-sans:  "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, ui-serif, serif;
+  --font-mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --max-width-content: 960px;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
-  color: var(--body);
+  background: var(--color-bg);
+  color: var(--color-body);
   font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +38,6 @@ body {
 * { box-sizing: border-box; }
 
 ::selection {
-  background: var(--blue-bg);
-  color: var(--blue);
+  background: var(--color-blue-bg);
+  color: var(--color-blue);
 }

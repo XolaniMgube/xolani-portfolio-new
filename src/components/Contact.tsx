@@ -11,7 +11,7 @@ export function Contact() {
 
       <Reveal>
         <div className="max-w-[560px]">
-          <p className="text-[0.9rem] text-body leading-[1.85] mb-10">
+          <p className="text-[1rem] text-bright leading-[1.85] mb-10">
             Whether you have a project in mind, a role that might be a fit, or just want to ask
             something — my inbox is open. I reply to everything, usually within a day.
             <br />
@@ -23,26 +23,26 @@ export function Contact() {
           </p>
 
           <div className="flex flex-col gap-3 mb-10">
-            <div className="grid grid-cols-[90px_1fr] gap-4 items-center text-[0.85rem]">
-              <span className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-dim">Email</span>
+            <div className="grid grid-cols-[90px_1fr] gap-4 items-center text-[0.95rem]">
+              <span className="font-mono text-[0.7rem] tracking-widest uppercase text-muted">Email</span>
               <a
                 href={`mailto:${contact.email}`}
-                className="text-body hover:text-blue transition-colors duration-200"
+                className="text-bright hover:text-blue transition-colors duration-200"
               >
                 {contact.email}
               </a>
             </div>
             {contact.links.map((l) => (
-              <div key={l.label} className="grid grid-cols-[90px_1fr] gap-4 items-center text-[0.85rem]">
-                <span className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-dim">
+              <div key={l.label} className="grid grid-cols-[90px_1fr] gap-4 items-center text-[0.95rem]">
+                <span className="font-mono text-[0.7rem] tracking-widest uppercase text-muted">
                   {l.label}
                 </span>
                 {l.href ? (
-                  <a href={l.href} className="text-body hover:text-blue transition-colors duration-200">
+                  <a href={l.href} className="text-bright hover:text-blue transition-colors duration-200">
                     {l.display}
                   </a>
                 ) : (
-                  <span className="text-body">{l.display}</span>
+                  <span className="text-bright">{l.display}</span>
                 )}
               </div>
             ))}
