@@ -2,6 +2,7 @@ import { contact } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 import { ContactForm } from "./ContactForm";
+import { CopyButton } from "./CopyButton";
 
 export function Contact() {
   return (
@@ -33,12 +34,15 @@ export function Contact() {
             <div className="flex flex-col gap-3 pt-2 border-t border-bg-line">
               <div className="flex flex-col gap-1">
                 <span className="font-mono text-[0.7rem] tracking-widest uppercase text-muted">Email</span>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="text-[0.95rem] text-bright hover:text-blue transition-colors duration-200"
-                >
-                  {contact.email}
-                </a>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="text-[0.95rem] text-bright hover:text-blue transition-colors duration-200"
+                  >
+                    {contact.email}
+                  </a>
+                  <CopyButton text={contact.email} />
+                </div>
               </div>
               {contact.links.map((l) => (
                 <div key={l.label} className="flex flex-col gap-1">
@@ -55,6 +59,18 @@ export function Contact() {
                 </div>
               ))}
             </div>
+
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center justify-center gap-2 w-full bg-blue text-bg font-mono text-[0.75rem] tracking-widest uppercase font-medium px-6 py-3.5 rounded-[3px] hover:opacity-85 hover:-translate-y-px transition-all duration-200"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Download CV
+            </a>
           </div>
         </div>
       </Reveal>

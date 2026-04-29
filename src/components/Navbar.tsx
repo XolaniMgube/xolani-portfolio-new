@@ -7,7 +7,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5vw] py-5 bg-bg/88 backdrop-blur-lg border-b border-bg-line">
       <Link href="/" className="font-mono text-[0.8rem] text-blue tracking-[0.04em]">
-        xm<span className="text-muted">/</span>dev
+        Xolani Mgube<span className="text-muted"> : Dev</span>
       </Link>
 
       <div className="flex items-center gap-8">
@@ -21,7 +21,7 @@ export function Navbar() {
           </a>
         ))}
         <a
-          href="#contact"
+          href="/#contact"
           className="font-mono text-[0.72rem] tracking-widest uppercase text-blue border border-blue/30 px-4 py-[0.4rem] rounded-[3px] hover:bg-blue-bg hover:border-blue transition-all duration-200"
         >
           Hire me
