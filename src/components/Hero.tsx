@@ -1,8 +1,12 @@
 import { Reveal } from "./Reveal";
+import { HeroLetters } from "./HeroLetters";
+import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-[5vw] pt-32 pb-24 max-w-content">
+    <section className="relative overflow-hidden min-h-screen w-full">
+      <HeroLetters />
+      <div className="flex flex-col justify-center px-[5vw] pt-32 pb-24 max-w-content min-h-screen">
       <Reveal>
         {/* pre-line */}
         <div className="flex items-center gap-3 font-mono text-[0.85rem] text-blue tracking-[0.06em] mb-5">
@@ -25,16 +29,27 @@ export function Hero() {
           className="font-serif italic text-muted font-normal mb-8"
           style={{ fontSize: "clamp(1rem, 2.5vw, 1.4rem)" }}
         >
-          I build things for the web that actually work.
+          5+ years of experience building things for the web that actually work.
         </p>
 
         {/* desc */}
-        <p className="text-[1.05rem] text-bright max-w-130 leading-[1.85] mb-12">
-          Four years of building fast, accessible interfaces for businesses that care
-          about their users. I write clean code, ship on time, and think about the{" "}
+        {/* <p className="text-[1.05rem] text-bright max-w-[44ch] leading-[1.75] mb-6">
+          5+ years shipping production interfaces — React, Next.js, TypeScript.
+          I solve the{" "}
           <strong className="text-bright font-medium">business problem</strong> before
-          touching the keyboard.
-        </p>
+          writing a single line.
+        </p> */}
+
+        {/* quick stats */}
+        <div className="flex gap-x-7 gap-y-2 flex-wrap mb-12 font-mono text-[0.72rem] tracking-widest uppercase">
+          {/* <span className="text-muted">
+            <span className="text-blue font-medium">5+</span> yrs experience
+          </span> */}
+          {/* <span className="text-muted">Johannesburg, SA</span>
+          <span className="text-muted">React · Next.js · TS</span>
+          <span className="text-teal">Open to work</span> */}
+          <span className="text-muted">Founder of <span className="text-teal"><Link href={"https://luminacube.co.za"}>Lumina Cube Consulting</Link></span></span>
+        </div>
 
         {/* CTAs */}
         <div className="flex gap-4 items-center flex-wrap">
@@ -52,6 +67,7 @@ export function Hero() {
           </a>
         </div>
       </Reveal>
+      </div>
     </section>
   );
 }
