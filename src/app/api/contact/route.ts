@@ -4,6 +4,14 @@ import { NextRequest } from "next/server";
 const TO_EMAIL = "xnmgube@gmail.com";
 
 export async function POST(request: NextRequest) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return Response.json(
+      { error: "Email service is not configured." },
+      { status: 503 }
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();
@@ -21,7 +29,7 @@ export async function POST(request: NextRequest) {
     return Response.json({ error: "All fields are required." }, { status: 400 });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const resend = new Resend(apiKey);
 
   try {
     await resend.emails.send({

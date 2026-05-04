@@ -8,29 +8,50 @@ const LETTERS = [
   { char: "O", right: "8%",  top: "68%", size: "3.2rem", op: 0.16, anim: "hf3", dur: "9s",  del: "-2s" },
 ];
 
+const MOBILE_LETTERS = [
+  { char: "X", right: "3%", top: "12%", size: "3.2rem", op: 0.15, anim: "hf1", dur: "11s", del: "0s"  },
+  { char: "M", right: "4%", top: "44%", size: "2.6rem", op: 0.13, anim: "hf2", dur: "14s", del: "-4s" },
+  { char: "G", right: "3%", top: "68%", size: "2rem",   op: 0.12, anim: "hf3", dur: "9s",  del: "-2s" },
+];
+
 export function HeroLetters() {
   return (
-    <div aria-hidden="true" className="hidden md:block">
-      {LETTERS.map(({ char, right, top, size, op, anim, dur, del }) => (
-        <span
-          key={char + right}
-          className="hl absolute font-serif text-blue pointer-events-none select-none"
-          style={{
-            right,
-            top,
-            fontSize: size,
-            opacity: op,
-            animationName: anim,
-            animationDuration: dur,
-            animationDelay: del,
-            animationIterationCount: "infinite",
-            animationTimingFunction: "ease-in-out",
-            animationDirection: "alternate",
-          }}
-        >
-          {char}
-        </span>
-      ))}
+    <div aria-hidden="true">
+      {/* mobile — 3 small letters hugging the right edge */}
+      <div className="sm:hidden">
+        {MOBILE_LETTERS.map(({ char, right, top, size, op, anim, dur, del }) => (
+          <span
+            key={char + "m"}
+            className="hl absolute font-serif text-blue pointer-events-none select-none"
+            style={{
+              right, top, fontSize: size, opacity: op,
+              animationName: anim, animationDuration: dur, animationDelay: del,
+              animationIterationCount: "infinite", animationTimingFunction: "ease-in-out",
+              animationDirection: "alternate",
+            }}
+          >
+            {char}
+          </span>
+        ))}
+      </div>
+
+      {/* sm+ — full set */}
+      <div className="hidden sm:block">
+        {LETTERS.map(({ char, right, top, size, op, anim, dur, del }) => (
+          <span
+            key={char + right}
+            className="hl absolute font-serif text-blue pointer-events-none select-none"
+            style={{
+              right, top, fontSize: size, opacity: op,
+              animationName: anim, animationDuration: dur, animationDelay: del,
+              animationIterationCount: "infinite", animationTimingFunction: "ease-in-out",
+              animationDirection: "alternate",
+            }}
+          >
+            {char}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
