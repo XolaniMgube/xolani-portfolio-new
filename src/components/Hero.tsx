@@ -29,39 +29,23 @@ export function Hero() {
           className="font-serif italic text-muted font-normal mb-8"
           style={{ fontSize: "clamp(1rem, 2.5vw, 1.4rem)" }}
         >
-          5+ years of experience building things for the web that actually work.
+          5+ years of building scalable software and web systems with real-world impact.
         </p>
-
-        {/* desc */}
-        {/* <p className="text-[1.05rem] text-bright max-w-[44ch] leading-[1.75] mb-6">
-          5+ years shipping production interfaces — React, Next.js, TypeScript.
-          I solve the{" "}
-          <strong className="text-bright font-medium">business problem</strong> before
-          writing a single line.
-        </p> */}
-
-        {/* quick stats */}
         <div className="flex gap-x-7 gap-y-2 flex-wrap mb-12 font-mono text-[0.72rem] tracking-widest uppercase">
-          {/* <span className="text-muted">
-            <span className="text-blue font-medium">5+</span> yrs experience
-          </span> */}
-          {/* <span className="text-muted">Johannesburg, SA</span>
-          <span className="text-muted">React · Next.js · TS</span>
-          <span className="text-teal">Open to work</span> */}
-          <span className="text-muted">Founder of <span className="text-teal"><Link href={"https://luminacube.co.za"}>Lumina Cube Consulting</Link></span></span>
+          <span className="text-muted">Founder of <Link href={"https://luminacube.co.za"} className="text-teal border-b border-teal/30 pb-px hover:border-teal hover:text-teal/80 transition-all duration-200">Lumina Cube Consulting</Link></span>
         </div>
 
         {/* CTAs */}
         <div className="flex gap-4 items-center flex-wrap">
           <a
-            href="#work"
-            className="bg-blue text-bg font-mono text-[0.75rem] tracking-[0.08em] uppercase px-7 py-3 rounded-[3px] font-medium hover:opacity-85 hover:-translate-y-px transition-all duration-200"
+            href="#projects"
+            className="bg-blue text-bg font-mono text-[0.80rem] tracking-[0.08em] uppercase px-7 py-3 rounded-[3px] font-medium hover:opacity-85 hover:-translate-y-px transition-all duration-200"
           >
             See my work
           </a>
           <a
             href="#contact"
-            className="font-mono text-[0.75rem] tracking-[0.08em] uppercase text-muted border-b border-dim pb-px hover:text-bright hover:border-muted transition-all duration-200"
+            className="ml-4 font-mono text-[0.80rem] tracking-[0.08em] uppercase text-blue border-b border-blue pb-px hover:text-bright hover:border-muted transition-all duration-200"
           >
             Get in touch
           </a>
