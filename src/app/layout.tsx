@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Xolani Mgube — Frontend Developer",
   description:
     "Johannesburg-based frontend developer building fast, purposeful web experiences for businesses that care about their users.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "Xolani Mgube — Frontend Developer",
     description: "Building things for the web that actually work.",
